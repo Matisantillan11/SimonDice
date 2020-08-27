@@ -6,13 +6,23 @@
     <link rel="stylesheet" href="/Estilos/style.css">
   </head>
   <body>
-    <div class="gameboard">
-      <div id="celeste" class="color celeste left" data-color="celeste"></div>
-      <div id="violeta" class="color violeta right" data-color="violeta"></div>
-      <div id="naranja" class="color naranja left" data-color="naranja"></div>
-      <div id="verde" class="color verde right" data-color="verde"></div>
-      <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">Empezar a jugar!</button>
+    <header class="header">
+      <h1 class="title">Simón Dice</h1>
+      <p class="subtitle">Seguí la secuencia de luces y divertite jugando!!</p>
+    </header>
+    <div class="scoreboard">
+      <div  id="usuario"class="usuarios">User<br><span id="marcador-usuario">0</span></div>
+      <div  id="compu"class="usuarios">Compu<br><span id="marcador-machine">0</span></div>
+      
+      <div class="gameboard">
+        <div id="celeste" class="color celeste left" data-color="celeste"></div>
+        <div id="violeta" class="color violeta right" data-color="violeta"></div>
+        <div id="naranja" class="color naranja left" data-color="naranja"></div>
+        <div id="verde" class="color verde right" data-color="verde"></div>
+        <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">Empezar a jugar!</button>
+      </div>
     </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="/Script/index.js"></script>
   </body>
 </html>

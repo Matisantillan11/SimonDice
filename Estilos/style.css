@@ -1,85 +1,153 @@
+* {
+  margin:0;
+  font-family: "Ubuntu Mono", monospace;
+}
 body {
-    margin: 0;
-    background: #dedede;
-    display: flex;
-    align-items: center;
-    height: 100vh;
-  }
+  margin: 0;
+  background: #dedede;
+  height: 100vh;
+  background-image: url(/fondo.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+}
 
-  .gameboard {
-    height: 100vh;
-    width: 100vh;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto;
-    max-height: 60vh;
-    max-width: 60vh;
-  }
+.header{
+  width: 100%;
+  height: 20vh;
+  align-items:center;
+  margin-bottom:2%;
+  
+}
 
-  .color {
-    width: 50%;
-    height: 50%;
-    display: inline-block;
-  }
+.title{
+  color:#ffff;
+  font-size: 4rem;
+  padding-left: 37%;
+}
 
-  .left {
-    float: left;
-  }
+.subtitle{
+  color:#ffff;
+  font-size:1.5rem;
+  margin-top: 1%;
+  padding-left:28%;
+}
 
-  .right {
-    float: left;
-  }
+.scoreboard{
+  border: 3px solid #ffff;
+  width: 60%;
+  height: 65%;
+  padding-top:3%;
+  margin-left:19.5%;
+}
 
-  .celeste {
-    background: #22a6b3;
-  }
+.usuarios{
+  color:#ffff;
+  font-size: 25px;
+  position: absolute;
+  width: 8%;
+  background: #f10ce6;
+  border-radius: 15px;
+  font-size: 30px;
+  padding: 10px 10px;
+}
 
-  .celeste.light {
-    background: #7ed6df;
-  }
+#usuario{
+  top: 52%;
+  left: 14%;
+  padding-left:3%;
+  justify-content: center;
+}
 
-  .violeta {
-    background: #be2edd;
-  }
+#compu{
+  top:52%;
+  right:14%;
+  padding-left:3%;
+}
 
-  .violeta.light {
-    background: #e056fd;
-  }
+#usuario span{
+  padding-left: 24%;
+  
+}
 
-  .naranja {
-    background: #f0932b;
-  }
+#compu span{
+  padding-left: 24%;
+  
+}
 
-  .naranja.light {
-    background: #ffbe76;
-  }
+.gameboard {
+  height: 100vh;
+  width: 100vh;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  max-height: 60vh;
+  max-width: 60vh;
+}
 
-  .verde {
-    background: #6ab04c;
-  }
+.color {
+  width: 50%;
+  height: 50%;
+  display: inline-block;
+}
 
-  .verde.light {
-    background: #badc58;
-  }
+.left {
+  float: left;
+}
 
-  .btn-start {
-    width: 400px;
-    height: 100px;
-    background: #ecf0f1;
-    color: #2c3e50;
-    font-size: 2.5rem;
-    position: absolute;
-    top: calc(50% - 50px);
-    left: calc(50% - 200px);
-    outline:none;
-  }
+.right {
+  float: left;
+}
 
-  .btn-start:active{
-    background: #3d8120;
-    color: #ffff;
-    transform: scale(.98)
-  }
+.celeste {
+  background: #22a6b3;
+}
 
-  .hide {
-    display: none;
-  }
+.celeste.light {
+  background: #7ed6df;
+}
+
+.violeta {
+  background: #be2edd;
+}
+
+.violeta.light {
+  background: #e056fd;
+}
+
+.naranja {
+  background: #f0932b;
+}
+
+.naranja.light {
+  background: #ffbe76;
+}
+
+.verde {
+  background: #6ab04c;
+}
+
+.verde.light {
+  background: #badc58;
+}
+
+.btn-start {
+  width: 400px;
+  height: 100px;
+  background: #ecf0f1;
+  color: #2c3e50;
+  font-size: 2.5rem;
+  position: absolute;
+  top:52%;
+  left: calc(50% - 205px);
+  outline: none;
+}
+
+.btn-start:active {
+  background: #3d8120;
+  color: #ffff;
+}
+
+.hide {
+  display: none;
+  
+}
