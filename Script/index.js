@@ -4,7 +4,7 @@ const naranja = document.getElementById('naranja');
 const verde = document.getElementById('verde');
 const btnEmpezar = document.getElementById('btnEmpezar');
 const nombreUsuario = document.getElementById('usuario');
-const ultimo_nivel = 10;
+const ultimo_nivel = 4;
 let scoreUser = 0;
 let scorePc = 0;
 let marcadorUsuario = document.getElementById('marcador-usuario');
@@ -14,6 +14,7 @@ let usuario;
 
 class Juego {
   constructor() {
+    
     this.inicializar = this.inicializar.bind(this);
     this.inicializar();
     this.generarSecuencia();
@@ -22,8 +23,7 @@ class Juego {
   }
 
   inicializar() {
-    /* this.obtenerNombre = this.obtenerNombre.bind(this);
-    this.obtenerNombre(); */
+    
     this.siguienteNivel = this.siguienteNivel.bind(this);
     this.elegirColor = this.elegirColor.bind(this);
     btnEmpezar.classList.toggle('hide')
@@ -42,6 +42,8 @@ class Juego {
       usuario = "User";
     }else if (usuario.length > 5){
       usuario = prompt('¿Cuál es tu nombre de usuario? (No más de 5 carácteres): ');
+      this.nombre = usuario;
+      this.cambiarNombre(usuario);
     }else{
       this.nombre = usuario;
       this.cambiarNombre(usuario);
@@ -51,7 +53,7 @@ class Juego {
 
   cambiarNombre(nombre){
       nombreUsuario.innerHTML = nombre;
-      marcadorUsuario.innerHTML = 0;
+      marcadorUsuario.innerHTML = scoreUser;
   }  */
 
   generarSecuencia(){
@@ -129,8 +131,9 @@ class Juego {
       if(this.subnivel === this.nivel){
         this.nivel++;
         scoreUser++;
-       marcadorUsuario.innerHTML = scoreUser;
+        marcadorUsuario.innerHTML = scoreUser;
         if(this.nivel === (ultimo_nivel + 1)){
+          
           this.ganaste();
         }else{
           setTimeout(this.siguienteNivel, 1500);
