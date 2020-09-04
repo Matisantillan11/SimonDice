@@ -130,10 +130,10 @@ class Juego {
       
       if(this.subnivel === this.nivel){
         this.nivel++;
-        scoreUser++;
-        marcadorUsuario.innerHTML = scoreUser;
+        
         if(this.nivel === (ultimo_nivel + 1)){
-          
+          scoreUser++;
+          marcadorUsuario.innerHTML = scoreUser;
           this.ganaste();
         }else{
           setTimeout(this.siguienteNivel, 1500);
@@ -147,14 +147,14 @@ class Juego {
   }
 
   ganaste(){
-    swal('Simon Dice',`Felicitaciones ${this.nombre}, ganaste`, 'success').then(()=>{
+    swal('Simon Dice',`Felicitaciones, completaste la secuencia!🎉`, 'success').then(()=>{
       this.eliminarEventosClick();
       this.inicializar();
     });
   }
 
   perdiste(){
-    swal('Simon Dice',`Lo sentimos ${this.nombre}, perdiste`, 'error').then(()=>{
+    swal('Simon Dice',`Lo sentimos, no pudiste completar la secuencia 😢 `, 'error').then(()=>{
       this.eliminarEventosClick();
       this.inicializar();
     });
